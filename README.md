@@ -1,109 +1,119 @@
-# Ana Dumitriu — portofoliu
+# Ana Dumitriu — Portfolio Website
 
-Codul complet al versiunii cu 9 pagini. Site static: HTML, CSS și JavaScript. Nu necesită React, npm, build, bază de date sau chei API.
+This project contains the complete personal portfolio website created to present software, AI, embedded systems, robotics, engineering work and technical projects through a professional, responsive web experience.
 
-## Deschidere și modificare pe Windows
+The portfolio is designed as a presentation website rather than a simple online CV. It combines project case studies, real screenshots and photographs, technical information, work experience, education, a cover letter, downloadable CV and direct contact options.
 
-1. Extrage arhiva, de exemplu în `C:\Users\User\Documents\Proiecte\ana-portfolio`.
-2. În Visual Studio Code: File > Open Folder, apoi alege folderul `ana-portfolio` (cel cu index.html și style.css).
-3. Deschide un terminal în acest folder. Dacă ai Python instalat, rulează:
+## Responsive Architecture
 
-```powershell
-py -m http.server 5500 --bind 127.0.0.1
+The website contains two intentionally separate interfaces:
+
+### Desktop
+
+The desktop experience is optimized for laptops and larger screens.
+
+It uses the full editorial layout, larger project visuals, animated navigation and more spacious technical case studies.
+
+### Mobile
+
+The mobile experience was designed independently for smaller screens instead of simply shrinking the desktop interface.
+
+It keeps the same content, visual identity and real project assets while using a more compact structure, smaller typography, reduced spacing and mobile-focused navigation.
+
+This makes the portfolio easier to explore on a phone without excessive vertical scrolling.
+
+## Automatic Device Selection
+
+The root `index.html` acts as a lightweight device router.
+
+When the main portfolio URL is opened:
+
+- screens up to **700 px** are sent to `/mobile/`
+- wider screens are sent to `/desktop/`
+
+This allows the same Vercel deployment and the same public portfolio URL to automatically open the appropriate interface.
+
+The two versions can also be opened directly:
+
+- `/desktop/`
+- `/mobile/`
+
+## Website Sections
+
+The portfolio includes:
+
+- Home
+- Work
+- Projects
+- AutoDiagnose AI case study
+- ELIO case study
+- About
+- Education
+- Cover Letter
+- CV access
+- Contact
+
+## Design Direction
+
+The visual system uses a dark premium technology aesthetic with:
+
+- dark neutral backgrounds
+- soft blue accents
+- editorial typography
+- restrained animations
+- subtle borders and rounded surfaces
+- real project imagery
+- consistent visual hierarchy
+
+The goal is to remain modern and technical without relying on excessive neon effects or decorative elements that compete with the actual work.
+
+## Technologies
+
+The portfolio itself is built with:
+
+- HTML5
+- CSS3
+- JavaScript
+- CSS Grid
+- Flexbox
+- responsive layouts
+- media queries
+- lightweight navigation and interaction animations
+
+Typography:
+
+- Manrope
+- DM Serif Display
+
+The site intentionally avoids a heavy frontend framework so that it remains lightweight, easy to deploy and straightforward to maintain.
+
+## Featured Technical Work
+
+The portfolio presents real projects including:
+
+### AutoDiagnose AI
+
+A full-stack automotive diagnostic platform combining vehicle data, symptoms, OBD-II / DTC information, adaptive questioning and diagnostic reasoning.
+
+Technologies represented include Next.js, TypeScript, React, Python, FastAPI, PostgreSQL, REST APIs, authentication, session management and AI-ready diagnostic architecture.
+
+### ELIO
+
+An educational robotics platform combining a custom physical robot, embedded control, BLE communication, companion software, visual programming concepts and AI-assisted interaction.
+
+Technologies represented include ESP32, C / C++, BLE, sensors, motor control, CAD and 3D printing.
+
+## Deployment
+
+The folder is prepared for direct static deployment on Vercel.
+
+Deploy the **root of this project**, the folder that contains:
+
+```text
+index.html
+vercel.json
+desktop/
+mobile/
 ```
 
-Dacă sistemul folosește comanda `python`, înlocuiește `py` cu `python`.
-4. Deschide `http://localhost:5500` în browser. Pentru oprirea serverului: Ctrl+C în terminal.
-5. Modifică fișierul dorit, salvează cu Ctrl+S și reîncarcă pagina. Pentru CSS rămas în cache, folosește Ctrl+F5.
-
-Alternativ, poți folosi un server local din editor, cu folderul acesta ca rădăcină. Nu deschide paginile doar prin dublu click: linkurile începând cu `/` au nevoie de un server local.
-
-## Unde modifici
-
-| Fișier | Conținut |
-|---|---|
-| index.html | Home |
-| about/index.html | About și competențe |
-| work/index.html | Experiență profesională |
-| education/index.html | Studii |
-| projects/index.html | Lista proiectelor |
-| projects/autodiagnose-ai/index.html | AutoDiagnose AI și galeria sa |
-| projects/elio/index.html | ELIO și galeria sa |
-| contact/index.html | Date de contact |
-| cover-letter/index.html | Scrisoarea de intenție |
-| style.css | Culori, fonturi, spațiere, animații și layout mobil |
-| app.js | Meniu mobil, apariții la scroll, progres, imprimare |
-
-Meniul și subsolul sunt în fiecare pagină HTML. Dacă schimbi numele unui element din meniu, actualizează-l în toate cele 9 pagini. Culorile principale sunt definite la începutul style.css, în `:root`. La sfârșitul fișierului sunt regulile pentru varianta cu pagini separate, care pot suprascrie regulile inițiale.
-
-## Fotografii
-
-Creează folderul `assets/images/` în rădăcina proiectului. Copiază acolo imaginile, de exemplu `elio-front.jpg` și `autodiagnose-dashboard.webp`. Recomandat: denumiri fără spații și fotografii comprimate.
-
-În pagina proiectului caută un element `<figure class="photo-slot">`. Înlocuiește doar blocul `<div class="photo-surface">...</div>` cu:
-
-```html
-<img class="project-photo" src="/assets/images/elio-front.jpg"
-     alt="Robotul ELIO văzut din față" loading="lazy">
-```
-
-Păstrează `<figcaption>` și schimbă descrierea. Adaugă la sfârșitul style.css:
-
-```css
-.project-photo {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
-  border: 1px solid var(--line);
-}
-```
-
-Spațiile actuale sunt rezervate pentru imagini; nu există un panou de administrare sau un sistem de încărcare a fotografiilor.
-
-## Contact și CV
-
-În contact/index.html înlocuiește blocul „Contact details coming soon” cu datele pe care dorești să le publici. Exemplu pentru email (înlocuiește adresa demonstrativă):
-
-```html
-<a href="mailto:adresa-ta@example.com">adresa-ta@example.com</a>
-```
-
-Poți adăuga un CV real în `assets/cv/Ana-Dumitriu-CV.pdf` și un link:
-
-```html
-<a class="button" href="/assets/cv/Ana-Dumitriu-CV.pdf" download>Download CV</a>
-```
-
-Înainte să distribui site-ul, verifică toate formulările, perioadele de studiu și muncă și scrisoarea de intenție. Acestea folosesc informațiile disponibile în conversație; CV-ul tău actual nu a fost încă furnizat.
-
-## Salvare pe GitHub
-
-Poți păstra acest folder într-un repository propriu, de exemplu `ana-portfolio`. Creează un repository gol în contul tău. Apoi, dacă ai Git instalat și autentificarea configurată, rulează din folder:
-
-```powershell
-git init
-git add .
-git commit -m "Add personal portfolio"
-git branch -M main
-git remote add origin https://github.com/DumitriuAna23/ana-portfolio.git
-git push -u origin main
-```
-
-Folosește URL-ul exact al repository-ului pe care l-ai creat. Pentru modificările următoare:
-
-```powershell
-git add .
-git commit -m "Update portfolio"
-git push
-```
-
-Arhiva nu include un repository Git deja configurat, istoricul Git sau credențiale. Repository-ul din exemplu nu a fost creat automat.
-
-## Copie locală vs. site online
-
-Site-ul existent: https://ana-dumitriu-portfolio.nmrdumitriu.chatgpt.site
-
-Salvarea pe laptop sau încărcarea pe GitHub NU actualizează automat acel link. Copia exportată este independentă de site-ul găzduit în ChatGPT. Pentru actualizarea acelui site, adu fișierele modificate în conversație și cere aplicarea lor. Pentru publicare independentă, poți conecta repository-ul tău la un serviciu de găzduire statică.
-
-Fișierele sunt pregătite pentru găzduire la rădăcina unui domeniu. Dacă alegi o găzduire într-un subfolder (de exemplu `/ana-portfolio/`), linkurile și căile absolute trebuie adaptate.
+The root router will then automatically select the appropriate version for the visitor's screen size.
