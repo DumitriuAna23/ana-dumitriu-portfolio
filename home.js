@@ -217,3 +217,143 @@ if (
   );
 
 }
+const nav = document.querySelector(".desktop-nav");
+
+if (nav) {
+
+  const indicator =
+    nav.querySelector(".nav-indicator");
+
+  const links =
+    [...nav.querySelectorAll("a[data-nav]")];
+
+  const currentPath =
+    window.location.pathname;
+
+
+  function getActiveNav() {
+
+    if (
+      currentPath === "/" ||
+      currentPath === "/index.html"
+    ) {
+      return "home";
+    }
+
+    if (
+      currentPath.startsWith("/projects/")
+    ) {
+      return "projects";
+    }
+
+    if (
+      currentPath.startsWith("/work/")
+    ) {
+      return "work";
+    }
+
+    if (
+      currentPath.startsWith("/about/")
+    ) {
+      return "about";
+    }
+
+    if (
+      currentPath.startsWith("/education/")
+    ) {
+      return "education";
+    }
+
+    if (
+      currentPath.startsWith("/cover-letter/")
+    ) {
+      return "letter";
+    }
+
+    if (
+      currentPath.startsWith("/contact/")
+    ) {
+      return "contact";
+    }
+
+    return "home";
+  }
+
+
+  function moveIndicator(link) {
+
+    if (
+      !link ||
+      !indicator
+    ) {
+      return;
+    }
+
+    const navRect =
+      nav.getBoundingClientRect();
+
+    const linkRect =
+      link.getBoundingClientRect();
+
+    const offsetX =
+      linkRect.left -
+      navRect.left;
+
+    indicator.style.width =
+      `${linkRect.width}px`;
+
+    indicator.style.transform =
+      `translateX(${offsetX}px)`;
+  }
+
+
+  const activeName =
+    getActiveNav();
+
+  const activeLink =
+    links.find(
+      link =>
+        link.dataset.nav === activeName
+    );
+
+  if (activeLink) {
+
+    activeLink.classList.add(
+      "is-active"
+    );
+
+    requestAnimationFrame(() => {
+      moveIndicator(activeLink);
+    });
+
+  }
+
+
+  links.forEach(link => {
+
+    link.addEventListener(
+      "mouseenter",
+      () => {
+        moveIndicator(link);
+      }
+    );
+
+
+    link.addEventListener(
+      "mouseleave",
+      () => {
+        moveIndicator(activeLink);
+      }
+    );
+
+  });
+
+
+  window.addEventListener(
+    "resize",
+    () => {
+      moveIndicator(activeLink);
+    }
+  );
+
+}

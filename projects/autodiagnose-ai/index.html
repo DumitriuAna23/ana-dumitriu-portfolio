@@ -1,1 +1,710 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="AutoDiagnose AI — Ana Dumitriu. Software development, automotive engineering, and educational robotics."><title>AutoDiagnose AI · Ana Dumitriu</title><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230c111c'/%3E%3Cpath d='M14 47 29 17h7l15 30H40l-3-7H26l-3 7Zm15-15h5l-2-6Z' fill='%239cbcff'/%3E%3C/svg%3E"><link rel="stylesheet" href="/style.css"></head><body><div class="progress" aria-hidden="true"></div><a class="skip" href="#main">Skip to content</a><header><a href="/" class="brand" aria-label="Ana Dumitriu home">ana<span>.</span></a><button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu <span>+</span></button><nav id="main-nav" aria-label="Main navigation"><a href="/">Home</a><a href="/about/">About</a><a href="/work/">Work</a><a href="/education/">Education</a><a href="/projects/" aria-current="page">Projects</a><a href="/cover-letter/">Cover Letter</a><a href="/contact/">Contact</a></nav></header><main id="main"><section class="case-study"><a class="back-link" href="/projects/">All projects</a><div class="case-header"><span class="eyebrow">SOFTWARE / AUTOMOTIVE</span><h1>AutoDiagnose AI</h1><p class="case-lead">A structured path from vehicle symptoms to diagnostic insight.</p><div class="tags"><span>Next.js</span><span>TypeScript</span><span>Python</span><span>FastAPI</span><span>SQL</span></div></div><div class="case-summary"><span class="eyebrow">THE PROJECT</span><div><p>A full-stack application connecting vehicle information, symptoms, diagnostic trouble codes, and adaptive questions in one guided workflow.</p><a class="button secondary" target="_blank" rel="noopener" href="https://github.com/DumitriuAna23/autodiagnose-ai">View source on GitHub</a></div></div><div class="case-gallery"><div class="section-heading"><div><span class="eyebrow">A CLOSER LOOK</span><h2>Project gallery.</h2></div></div><div class="gallery-grid"><figure class="photo-slot"><div class="photo-surface"><span class="photo-cross">+</span><span class="photo-kind">PROJECT SCREENSHOT</span></div><figcaption><span>01</span>Dashboard & overview</figcaption></figure><figure class="photo-slot"><div class="photo-surface"><span class="photo-cross">+</span><span class="photo-kind">PROJECT SCREENSHOT</span></div><figcaption><span>02</span>Vehicle and symptom flow</figcaption></figure><figure class="photo-slot"><div class="photo-surface"><span class="photo-cross">+</span><span class="photo-kind">PROJECT SCREENSHOT</span></div><figcaption><span>03</span>Diagnostic results</figcaption></figure></div></div><div class="contribution-grid"><article><span class="eyebrow">01 / MY CONTRIBUTION</span><h3>Interface & experience</h3><p>Built a responsive Next.js and TypeScript interface with Romanian and English support and an installable PWA experience.</p></article><article><span class="eyebrow">02 / MY CONTRIBUTION</span><h3>Backend & accounts</h3><p>Developed FastAPI endpoints for diagnostic cases, authentication, guest sessions, and personal history.</p></article><article><span class="eyebrow">03 / MY CONTRIBUTION</span><h3>Diagnostic reasoning</h3><p>Created an adaptive question flow and a rule-based engine that ranks potential causes with confidence scores.</p></article><article><span class="eyebrow">04 / MY CONTRIBUTION</span><h3>Data & architecture</h3><p>Used SQLite and database migrations, with an architecture prepared for future NLP and LLM integration.</p></article></div><p class="detail-note">The diagnostic engine uses rules. NLP and LLM integration is a planned architectural extension, rather than a claim that a language model currently performs the diagnosis.</p></section><section class="page-banner"><div><h2>More than one discipline.</h2><p>Discover the other side of my work.</p></div><a class="button" href="/projects/elio/">Next project<span class="plus">+</span></a></section></main><footer><a href="/" class="brand">ana<span>.</span></a><p>Ana Dumitriu · Software & Automotive Engineering</p><a href="/contact/">Contact</a></footer><script src="/app.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <meta
+    name="description"
+    content="AutoDiagnose AI — full-stack automotive diagnostic platform case study by Ana Dumitriu."
+  >
+
+  <title>
+    AutoDiagnose AI · Ana Dumitriu
+  </title>
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="./autodiagnose.css"
+  >
+</head>
+
+<body>
+
+  <div
+    class="cursor-glow"
+    aria-hidden="true"
+  ></div>
+
+  <header class="site-header">
+
+    <a
+      href="/"
+      class="logo"
+      aria-label="Ana Dumitriu home"
+    >
+      AD<span>.</span>
+    </a>
+
+    <nav
+      class="desktop-nav"
+      aria-label="Main navigation"
+    >
+
+      <span
+        class="nav-indicator"
+        aria-hidden="true"
+      ></span>
+
+      <a href="/" data-nav="home">
+        Home
+      </a>
+
+      <a href="/work/" data-nav="work">
+        Work
+      </a>
+
+      <a href="/projects/" data-nav="projects">
+        Projects
+      </a>
+
+      <a href="/about/" data-nav="about">
+        About
+      </a>
+
+      <a href="/education/" data-nav="education">
+        Education
+      </a>
+
+      <a href="/cover-letter/" data-nav="letter">
+        Letter
+      </a>
+
+      <a href="/contact/" data-nav="contact">
+        Contact
+      </a>
+
+    </nav>
+
+  </header>
+
+  <main>
+
+    <section class="project-hero">
+
+      <div class="hero-copy">
+
+        <div class="hero-eyebrow">
+          <span>01 / FEATURED CASE STUDY</span>
+          <span>FULL-STACK · AI · AUTOMOTIVE</span>
+        </div>
+
+        <h1>
+          AutoDiagnose
+          <em>AI.</em>
+        </h1>
+
+        <p class="hero-lead">
+          A full-stack diagnostic platform that combines vehicle data,
+          symptoms, OBD-II / DTC information and adaptive questioning
+          to identify probable causes and guide the user toward a clearer diagnosis.
+        </p>
+
+        <div class="hero-actions">
+          <a
+            href="#case-study"
+            class="primary-button"
+          >
+            Explore the case study
+            <span>↓</span>
+          </a>
+
+          <a
+            href="https://github.com/DumitriuAna23/autodiagnose-ai"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="secondary-button"
+          >
+            View GitHub
+            <span>↗</span>
+          </a>
+        </div>
+
+        <div class="hero-tags">
+          <span>Next.js</span>
+          <span>TypeScript</span>
+          <span>FastAPI</span>
+          <span>Python</span>
+          <span>SQLite → PostgreSQL</span>
+          <span>PWA</span>
+        </div>
+
+      </div>
+
+      <div class="hero-visual">
+
+        <div
+          class="hero-glow"
+          aria-hidden="true"
+        ></div>
+
+        <div class="browser-frame hero-browser">
+
+          <div class="browser-bar">
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <div class="browser-address">
+              autodiagnose.ai / diagnosis
+            </div>
+          </div>
+
+          <img
+            src="./assets/desktop/desktop-02-overview.jpeg"
+            alt="AutoDiagnose AI desktop interface"
+          >
+
+        </div>
+
+        <div class="phone-frame hero-phone">
+
+          <div class="phone-notch"></div>
+
+          <img
+            src="./assets/mobile/mobile-03-overview.jpeg"
+            alt="AutoDiagnose AI mobile interface"
+          >
+
+        </div>
+
+      </div>
+
+      <div class="hero-bottom">
+        <span>DESKTOP + MOBILE</span>
+        <span>AUTH · DIAGNOSTIC FLOW · HISTORY</span>
+        <span>END-TO-END PRODUCT DEVELOPMENT</span>
+      </div>
+
+    </section>
+
+
+    <section
+      class="case-intro reveal"
+      id="case-study"
+    >
+
+      <div class="section-label">
+        01 / THE PRODUCT
+      </div>
+
+      <div class="case-intro-main">
+
+        <h2>
+          From scattered symptoms
+          <br>
+          to a
+          <em>structured diagnostic flow.</em>
+        </h2>
+
+        <div class="statement-bar">
+
+          <span
+            class="statement-line"
+            aria-hidden="true"
+          ></span>
+
+          <p>
+            The goal was not to create another screen that lists fault codes.
+            AutoDiagnose structures the problem: vehicle context, symptoms,
+            DTC data, adaptive questions and confidence-based results.
+          </p>
+
+          <span class="statement-label">
+            PRODUCT + DIAGNOSTIC LOGIC
+          </span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="facts reveal">
+
+      <article>
+        <span class="fact-number">01</span>
+        <h3>Problem</h3>
+        <p>
+          Vehicle issues are often described through fragmented symptoms,
+          fault codes and incomplete context.
+        </p>
+      </article>
+
+      <article>
+        <span class="fact-number">02</span>
+        <h3>Approach</h3>
+        <p>
+          Turn those signals into a guided, adaptive diagnostic experience
+          instead of a static form.
+        </p>
+      </article>
+
+      <article>
+        <span class="fact-number">03</span>
+        <h3>Product</h3>
+        <p>
+          A responsive web application with authentication, personal history,
+          diagnostic logic and a mobile-first PWA experience.
+        </p>
+      </article>
+
+    </section>
+
+
+    <section class="flow-section reveal">
+
+      <div class="section-heading">
+
+        <div>
+          <span class="section-label">
+            02 / DIAGNOSTIC FLOW
+          </span>
+
+          <h2>
+            A guided process,
+            <br>
+            <em>not a giant form.</em>
+          </h2>
+        </div>
+
+        <p>
+          Each stage narrows the context before analysis,
+          keeping the experience understandable while gathering
+          the data needed for better diagnostic reasoning.
+        </p>
+
+      </div>
+
+      <div class="flow-grid">
+
+        <article class="flow-card">
+          <span class="flow-index">01</span>
+
+          <div class="flow-copy">
+            <h3>Vehicle context</h3>
+            <p>
+              Make, model, year, engine, fuel type and mileage provide
+              the technical context for the case.
+            </p>
+          </div>
+
+          <div class="screen-shell">
+            <img
+              src="./assets/desktop/desktop-03-vehicle-selection.jpeg"
+              alt="Vehicle selection screen"
+            >
+          </div>
+        </article>
+
+
+        <article class="flow-card flow-card-offset">
+          <span class="flow-index">02</span>
+
+          <div class="flow-copy">
+            <h3>Symptoms + DTC</h3>
+            <p>
+              The user can describe multiple symptoms and add OBD-II
+              information instead of relying on a single signal.
+            </p>
+          </div>
+
+          <div class="screen-shell">
+            <img
+              src="./assets/desktop/desktop-05-symptom-selection.jpeg"
+              alt="Symptom selection screen"
+            >
+          </div>
+        </article>
+
+
+        <article class="flow-card">
+          <span class="flow-index">03</span>
+
+          <div class="flow-copy">
+            <h3>Adaptive questions</h3>
+            <p>
+              Questions change based on the available context,
+              helping narrow down the diagnostic path.
+            </p>
+          </div>
+
+          <div class="screen-shell">
+            <img
+              src="./assets/desktop/desktop-06-adaptive-question.jpeg"
+              alt="Adaptive diagnostic question screen"
+            >
+          </div>
+        </article>
+
+
+        <article class="flow-card flow-card-offset">
+          <span class="flow-index">04</span>
+
+          <div class="flow-copy">
+            <h3>Review before analysis</h3>
+            <p>
+              The user can verify the complete diagnostic case
+              before the analysis is performed.
+            </p>
+          </div>
+
+          <div class="screen-shell">
+            <img
+              src="./assets/desktop/desktop-07-ready-for-analysis.jpeg"
+              alt="Ready for analysis review screen"
+            >
+          </div>
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <section class="results-section reveal">
+
+      <div class="results-copy">
+
+        <span class="section-label">
+          03 / DIAGNOSTIC OUTPUT
+        </span>
+
+        <h2>
+          Results designed to be
+          <em>interpretable.</em>
+        </h2>
+
+        <p>
+          Instead of presenting one absolute answer, the diagnostic engine
+          returns probable causes with confidence scores. This makes the result
+          easier to reason about and leaves room for richer AI-assisted analysis.
+        </p>
+
+        <div class="mini-list">
+          <span>Confidence scoring</span>
+          <span>Multiple probable causes</span>
+          <span>Case persistence</span>
+          <span>AI / LLM-ready architecture</span>
+        </div>
+
+      </div>
+
+      <div class="results-visual">
+
+        <div class="browser-frame">
+
+          <div class="browser-bar">
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <div class="browser-address">
+              diagnostic results
+            </div>
+          </div>
+
+          <img
+            src="./assets/desktop/desktop-08-diagnostic-results.jpeg"
+            alt="AutoDiagnose AI diagnostic results"
+          >
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="product-system reveal">
+
+      <div class="section-heading">
+
+        <div>
+          <span class="section-label">
+            04 / BEYOND THE DIAGNOSIS
+          </span>
+
+          <h2>
+            The diagnostic flow is
+            <br>
+            <em>only one part of the system.</em>
+          </h2>
+        </div>
+
+        <p>
+          The diagnostic flow sits inside a wider product experience:
+          sessions, account data, history, guidance and settings.
+        </p>
+
+      </div>
+
+      <div class="system-grid">
+
+        <article class="system-card">
+
+          <div class="system-card-copy">
+            <span>01 / HISTORY</span>
+            <h3>Personal diagnostic history</h3>
+            <p>
+              Authenticated users can return to previous diagnostic cases
+              instead of starting from zero each time.
+            </p>
+          </div>
+
+          <img
+            src="./assets/desktop/desktop-09-diagnostic-history.jpeg"
+            alt="Diagnostic history"
+          >
+
+        </article>
+
+
+        <article class="system-card">
+
+          <div class="system-card-copy">
+            <span>02 / GUIDE</span>
+            <h3>Guidance inside the product</h3>
+            <p>
+              The application includes contextual information so users can
+              understand the process instead of blindly following screens.
+            </p>
+          </div>
+
+          <img
+            src="./assets/desktop/desktop-10-diagnostic-guide.jpeg"
+            alt="Diagnostic guide"
+          >
+
+        </article>
+
+
+        <article class="system-card">
+
+          <div class="system-card-copy">
+            <span>03 / SETTINGS</span>
+            <h3>Account + application settings</h3>
+            <p>
+              Language, account experience and personal preferences are part
+              of the same product system.
+            </p>
+          </div>
+
+          <img
+            src="./assets/desktop/desktop-11-settings.jpeg"
+            alt="AutoDiagnose AI settings"
+          >
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <section class="mobile-section reveal">
+
+      <div class="mobile-heading">
+
+        <div>
+          <span class="section-label">
+            05 / MOBILE EXPERIENCE
+          </span>
+
+          <h2>
+            Designed to work
+            <br>
+            <em>away from the desk.</em>
+          </h2>
+        </div>
+
+        <p>
+          The mobile experience uses a dedicated layout rather than simply
+          shrinking the desktop interface. The product can also be installed
+          as a PWA for a more app-like experience.
+        </p>
+
+      </div>
+
+      <div class="phones-stage">
+
+        <div class="phone-showcase phone-a">
+          <div class="phone-notch"></div>
+          <img
+            src="./assets/mobile/mobile-01-welcome.jpeg"
+            alt="AutoDiagnose AI mobile welcome screen"
+          >
+        </div>
+
+        <div class="phone-showcase phone-b">
+          <div class="phone-notch"></div>
+          <img
+            src="./assets/mobile/mobile-04-vehicle-selection.jpeg"
+            alt="AutoDiagnose AI mobile vehicle screen"
+          >
+        </div>
+
+        <div class="phone-showcase phone-c">
+          <div class="phone-notch"></div>
+          <img
+            src="./assets/mobile/mobile-07-diagnostic-results.jpeg"
+            alt="AutoDiagnose AI mobile diagnostic results"
+          >
+        </div>
+
+        <div class="phone-showcase phone-d">
+          <div class="phone-notch"></div>
+          <img
+            src="./assets/mobile/mobile-08-diagnostic-history.jpeg"
+            alt="AutoDiagnose AI mobile history"
+          >
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="architecture reveal">
+
+      <div class="architecture-copy">
+
+        <span class="section-label">
+          06 / TECHNICAL STRUCTURE
+        </span>
+
+        <h2>
+          Frontend, backend and diagnostic logic
+          <em>working as one system.</em>
+        </h2>
+
+      </div>
+
+      <div class="architecture-grid">
+
+        <article>
+          <span>FRONTEND</span>
+          <h3>Next.js + TypeScript</h3>
+          <p>
+            Responsive product flows, stateful diagnosis steps,
+            reusable UI and mobile/PWA behavior.
+          </p>
+        </article>
+
+        <article>
+          <span>BACKEND</span>
+          <h3>FastAPI + Python</h3>
+          <p>
+            REST API, user sessions, diagnostic cases,
+            analysis endpoints and application logic.
+          </p>
+        </article>
+
+        <article>
+          <span>DATA</span>
+          <h3>Persistent multi-user data</h3>
+          <p>
+            Diagnostic history, guest sessions, account ownership and
+            persistent case data are handled as part of the same system.
+          </p>
+        </article>
+
+        <article>
+          <span>INTELLIGENCE</span>
+          <h3>Rules + confidence scoring</h3>
+          <p>
+            Structured diagnostic reasoning today, with an architecture
+            prepared for richer AI / LLM integration.
+          </p>
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <section class="closing-cta reveal">
+
+      <p>
+        AUTO DIAGNOSE AI · FULL-STACK PRODUCT CASE STUDY
+      </p>
+
+      <h2>
+        Built to show more than
+        <em>a polished interface.</em>
+      </h2>
+
+      <div class="cta-actions">
+
+        <a
+          href="https://github.com/DumitriuAna23/autodiagnose-ai"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="primary-button"
+        >
+          View repository
+          <span>↗</span>
+        </a>
+
+        <a
+          href="/projects/"
+          class="secondary-button"
+        >
+          Back to projects
+          <span>←</span>
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+
+    <a
+      href="/"
+      class="logo"
+    >
+      AD<span>.</span>
+    </a>
+
+    <p>
+      Ana Dumitriu · Software & Technology
+    </p>
+
+    <a href="/contact/">
+      Contact ↗
+    </a>
+
+  </footer>
+
+
+  <script src="./autodiagnose.js"></script>
+
+</body>
+
+</html>

@@ -1,84 +1,170 @@
 <!doctype html>
 
+
+
 <html lang="en">
+
+
+
+
 
 
 
 <head>
 
+
+
   <meta charset="utf-8">
 
 
 
+
+
+
+
   <meta
+
+
 
     name="viewport"
 
+
+
     content="width=device-width, initial-scale=1"
 
+
+
   >
+
+
+
+
 
 
 
   <meta
 
+
+
     name="description"
+
+
 
     content="Ana Dumitriu — software developer building full-stack, AI and connected technology products."
 
+
+
   >
+
+
+
+
 
 
 
   <title>
 
+
+
     Ana Dumitriu · Software Developer
+
+
 
   </title>
 
 
 
+
+
+
+
   <link
 
+
+
     rel="preconnect"
+
+
 
     href="https://fonts.googleapis.com"
 
+
+
   >
 
 
 
+
+
+
+
   <link
+
+
 
     rel="preconnect"
 
+
+
     href="https://fonts.gstatic.com"
+
+
 
     crossorigin
 
+
+
   >
 
 
 
+
+
+
+
   <link
+
+
 
     href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap"
 
+
+
     rel="stylesheet"
 
+
+
   >
+
+
+
+
 
 
 
   <link
 
+
+
     rel="stylesheet"
+
+
 
     href="/home.css"
 
+
+
   >
 
+
+
 </head>
+
+
+
+
+
+
 
 
 
@@ -88,13 +174,29 @@
 
 
 
+
+
+
+
   <div
+
+
 
     class="cursor-glow"
 
+
+
     aria-hidden="true"
 
+
+
   ></div>
+
+
+
+
+
+
 
 
 
@@ -104,17 +206,33 @@
 
 
 
+
+
+
+
     <a
+
+
 
       href="/"
 
+
+
       class="logo"
+
+
 
       aria-label="Ana Dumitriu home"
 
+
+
     >
 
+
+
       AD<span>.</span>
+
+
 
     </a>
 
@@ -122,63 +240,71 @@
 
 
 
+
+
+
+
+
+
     <nav
-
       class="desktop-nav"
-
       aria-label="Main navigation"
-
     >
 
-
-
-      <a href="/work/">
-
-        Work
-
-      </a>
-
-
-
-      <a href="/about/">
-
-        About
-
-      </a>
-
-
-
-      <a href="/education/">
-
-        Education
-
-      </a>
-
-
-
-      <a href="/cover-letter/">
-
-        Letter
-
-      </a>
-
-
+      <span
+        class="nav-indicator"
+        aria-hidden="true"
+      ></span>
 
       <a
-
-        href="/contact/"
-
-        class="nav-contact"
-
+        href="/"
+        data-nav="home"
+        class="is-active"
       >
-
-        Contact
-
-        <span>↗</span>
-
+        Home
       </a>
 
+      <a
+        href="/work/"
+        data-nav="work"
+      >
+        Work
+      </a>
 
+      <a
+        href="/projects/"
+        data-nav="projects"
+      >
+        Projects
+      </a>
+
+      <a
+        href="/about/"
+        data-nav="about"
+      >
+        About
+      </a>
+
+      <a
+        href="/education/"
+        data-nav="education"
+      >
+        Education
+      </a>
+
+      <a
+        href="/cover-letter/"
+        data-nav="letter"
+      >
+        Letter
+      </a>
+
+      <a
+        href="/contact/"
+        data-nav="contact"
+      >
+        Contact
+      </a>
 
     </nav>
 
@@ -186,23 +312,53 @@
 
 
 
+
+
+
+
+
+
     <button
+
+
 
       class="menu-button"
 
+
+
       aria-label="Open navigation"
+
+
 
       aria-expanded="false"
 
+
+
     >
 
+
+
       Menu
+
+
 
     </button>
 
 
 
+
+
+
+
   </header>
+
+
+
+
+
+
+
+
 
 
 
@@ -216,7 +372,17 @@
 
 
 
+
+
+
+
+
+
     <section class="hero">
+
+
+
+
 
 
 
@@ -226,7 +392,17 @@
 
 
 
+
+
+
+
+
+
         <div class="hero-copy">
+
+
+
+
 
 
 
@@ -234,15 +410,31 @@
 
 
 
+
+
+
+
             <span class="availability-dot"></span>
+
+
+
+
 
 
 
             <span>
 
+
+
               AVAILABLE FOR SOFTWARE & TECH OPPORTUNITIES
 
+
+
             </span>
+
+
+
+
 
 
 
@@ -252,11 +444,27 @@
 
 
 
+
+
+
+
+
+
           <p class="hero-name">
+
+
 
             ANA DUMITRIU · ROMANIA
 
+
+
           </p>
+
+
+
+
+
+
 
 
 
@@ -266,7 +474,15 @@
 
 
 
+
+
+
+
             I build ideas
+
+
+
+
 
 
 
@@ -274,15 +490,31 @@
 
 
 
+
+
+
+
             into
+
+
+
+
 
 
 
             <em>
 
+
+
               working products.
 
+
+
             </em>
+
+
+
+
 
 
 
@@ -292,25 +524,53 @@
 
 
 
+
+
+
+
+
+
           <p class="hero-description">
+
+
+
+
 
 
 
             Software developer working across
 
+
+
             <strong>full-stack development</strong>,
 
+
+
             <strong>applied AI</strong> and
+
+
 
             <strong>connected systems</strong>.
 
 
 
+
+
+
+
             I like taking products beyond the interface —
+
+
 
             from architecture and backend logic to
 
+
+
             real-world interaction.
+
+
+
+
 
 
 
@@ -320,17 +580,37 @@
 
 
 
+
+
+
+
+
+
           <div class="hero-actions">
+
+
+
+
 
 
 
             <a
 
+
+
               href="#selected-work"
+
+
 
               class="primary-button"
 
+
+
             >
+
+
+
+
 
 
 
@@ -338,15 +618,33 @@
 
 
 
+
+
+
+
               <span>
 
+
+
                 ↘
+
+
 
               </span>
 
 
 
+
+
+
+
             </a>
+
+
+
+
+
+
 
 
 
@@ -354,15 +652,29 @@
 
             <a
 
+
+
               href="https://github.com/DumitriuAna23"
+
+
 
               target="_blank"
 
+
+
               rel="noopener noreferrer"
+
+
 
               class="secondary-button"
 
+
+
             >
+
+
+
+
 
 
 
@@ -370,11 +682,23 @@
 
 
 
+
+
+
+
               <span>
+
+
 
                 ↗
 
+
+
               </span>
+
+
+
+
 
 
 
@@ -382,7 +706,17 @@
 
 
 
+
+
+
+
           </div>
+
+
+
+
+
+
 
 
 
@@ -392,43 +726,87 @@
 
 
 
+
+
+
+
             <span>
+
+
 
               Full-stack
 
+
+
             </span>
 
 
 
+
+
+
+
             <span>
+
+
 
               AI
 
+
+
             </span>
 
 
 
+
+
+
+
             <span>
+
+
 
               Frontend
 
+
+
             </span>
 
 
 
+
+
+
+
             <span>
+
+
 
               Backend
 
+
+
             </span>
+
+
+
+
 
 
 
             <span>
 
+
+
               Embedded
 
+
+
             </span>
+
+
+
+
 
 
 
@@ -436,7 +814,19 @@
 
 
 
+
+
+
+
         </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -446,19 +836,35 @@
 
         <div
 
+
+
           class="hero-visual"
 
+
+
           aria-label="Selected project previews"
+
+
 
         >
 
 
 
+
+
+
+
           <div
+
+
 
             class="visual-glow"
 
+
+
             aria-hidden="true"
+
+
 
           ></div>
 
@@ -466,25 +872,53 @@
 
 
 
+
+
+
+
+
+
           <a
+
+
 
             href="/projects/autodiagnose-ai/"
 
+
+
             class="visual-card auto-card parallax-card"
 
+
+
             data-depth="10"
+
+
 
           >
 
 
 
+
+
+
+
             <img
+
+
 
               src="/assets/autodiagnose-card.png"
 
+
+
               alt="AutoDiagnose AI project preview"
 
+
+
             >
+
+
+
+
 
 
 
@@ -492,23 +926,47 @@
 
 
 
+
+
+
+
             <div class="visual-card-caption">
+
+
+
+
 
 
 
               <span>
 
+
+
                 01 · FULL-STACK + AI
+
+
 
               </span>
 
 
 
+
+
+
+
               <strong>
+
+
 
                 AutoDiagnose AI
 
+
+
               </strong>
+
+
+
+
 
 
 
@@ -516,7 +974,17 @@
 
 
 
+
+
+
+
           </a>
+
+
+
+
+
+
 
 
 
@@ -524,23 +992,45 @@
 
           <a
 
+
+
             href="/projects/elio/"
+
+
 
             class="visual-card elio-card parallax-card"
 
+
+
             data-depth="7"
+
+
 
           >
 
 
 
+
+
+
+
             <img
+
+
 
               src="/assets/elio-card.png"
 
+
+
               alt="ELIO educational robot project preview"
 
+
+
             >
+
+
+
+
 
 
 
@@ -548,23 +1038,47 @@
 
 
 
+
+
+
+
             <div class="visual-card-caption">
+
+
+
+
 
 
 
               <span>
 
+
+
                 02 · ROBOTICS + SOFTWARE
+
+
 
               </span>
 
 
 
+
+
+
+
               <strong>
+
+
 
                 ELIO
 
+
+
               </strong>
+
+
+
+
 
 
 
@@ -572,7 +1086,17 @@
 
 
 
+
+
+
+
           </a>
+
+
+
+
+
+
 
 
 
@@ -582,19 +1106,39 @@
 
 
 
+
+
+
+
             <span>
 
+
+
               SELECTED WORK
+
+
 
             </span>
 
 
 
+
+
+
+
             <strong>
+
+
 
               Real products, real interfaces.
 
+
+
             </strong>
+
+
+
+
 
 
 
@@ -602,11 +1146,25 @@
 
 
 
+
+
+
+
         </div>
 
 
 
+
+
+
+
       </div>
+
+
+
+
+
+
 
 
 
@@ -616,31 +1174,63 @@
 
 
 
+
+
+
+
         <span>
+
+
 
           SOFTWARE DEVELOPMENT
 
+
+
         </span>
 
 
 
+
+
+
+
         <span>
+
+
 
           PRODUCT THINKING
 
+
+
         </span>
+
+
+
+
 
 
 
         <span>
 
+
+
           SYSTEMS THAT WORK BEYOND THE SCREEN
 
+
+
         </span>
+
+
+
+
 
 
 
       </div>
+
+
+
+
 
 
 
@@ -652,13 +1242,31 @@
 
 
 
+
+
+
+
+
+
+
+
     <section
+
+
 
       class="selected-work"
 
+
+
       id="selected-work"
 
+
+
     >
+
+
+
+
 
 
 
@@ -666,7 +1274,7 @@
 
 
 
-        <div>
+        <div class="section-intro-side">
 
 
 
@@ -692,47 +1300,73 @@
 
 
 
-        <h2>
+        <div class="section-intro-main">
 
 
 
-          Products that show
+          <h2>
 
+            Products that show
 
+            <br>
 
-          <br>
+            <em>how I think and build.</em>
 
-
-
-          <em>
-
-            how I think and build.
-
-          </em>
-
-
-
-        </h2>
+          </h2>
 
 
 
 
 
-        <p>
+          <div class="selected-work-statement">
 
 
 
-          I prefer projects that cross boundaries —
+            <span
 
-          interface, logic, data, AI and hardware.
+              class="selected-work-line"
+
+              aria-hidden="true"
+
+            ></span>
 
 
 
-        </p>
+            <p>
+
+              I prefer projects that cross boundaries — interface, logic,
+
+              data, AI and hardware.
+
+            </p>
+
+
+
+            <span class="selected-work-label">
+
+              MULTI-DISCIPLINARY PRODUCT WORK
+
+            </span>
+
+
+
+          </div>
+
+
+
+        </div>
 
 
 
       </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -744,7 +1378,15 @@
 
 
 
+
+
+
+
         <div class="project-copy">
+
+
+
+
 
 
 
@@ -752,19 +1394,39 @@
 
 
 
+
+
+
+
             <span>
+
+
 
               01 / FULL-STACK · AI
 
+
+
             </span>
+
+
+
+
 
 
 
             <span>
 
+
+
               FEATURED
 
+
+
             </span>
+
+
+
+
 
 
 
@@ -774,11 +1436,27 @@
 
 
 
+
+
+
+
+
+
           <h3>
+
+
 
             AutoDiagnose AI
 
+
+
           </h3>
+
+
+
+
+
+
 
 
 
@@ -788,11 +1466,23 @@
 
 
 
+
+
+
+
             A full-stack diagnostic platform that combines
+
+
 
             vehicle information, symptoms, OBD-II data and
 
+
+
             adaptive questions to identify probable causes.
+
+
+
+
 
 
 
@@ -802,47 +1492,97 @@
 
 
 
+
+
+
+
+
+
           <div class="project-tags">
 
 
 
+
+
+
+
             <span>
+
+
 
               Next.js
 
+
+
             </span>
 
 
 
+
+
+
+
             <span>
+
+
 
               TypeScript
 
+
+
             </span>
 
 
 
+
+
+
+
             <span>
+
+
 
               FastAPI
 
+
+
             </span>
 
 
 
+
+
+
+
             <span>
+
+
 
               Python
 
+
+
             </span>
+
+
+
+
 
 
 
             <span>
 
+
+
               PostgreSQL
 
+
+
             </span>
+
+
+
+
 
 
 
@@ -852,13 +1592,29 @@
 
 
 
+
+
+
+
+
+
           <a
+
+
 
             href="/projects/autodiagnose-ai/"
 
+
+
             class="project-link"
 
+
+
           >
+
+
+
+
 
 
 
@@ -866,15 +1622,31 @@
 
 
 
+
+
+
+
             <span>
 
+
+
               ↗
+
+
 
             </span>
 
 
 
+
+
+
+
           </a>
+
+
+
+
 
 
 
@@ -884,23 +1656,49 @@
 
 
 
+
+
+
+
+
+
         <a
+
+
 
           href="/projects/autodiagnose-ai/"
 
+
+
           class="project-showcase"
+
+
 
         >
 
 
 
+
+
+
+
           <img
+
+
 
             src="/assets/autodiagnose-real.png"
 
+
+
             alt="AutoDiagnose AI application interface"
 
+
+
           >
+
+
+
+
 
 
 
@@ -908,11 +1706,23 @@
 
 
 
+
+
+
+
             <span>
+
+
 
               REAL PRODUCT UI
 
+
+
             </span>
+
+
+
+
 
 
 
@@ -920,7 +1730,15 @@
 
 
 
+
+
+
+
         </a>
+
+
+
+
 
 
 
@@ -932,7 +1750,19 @@
 
 
 
+
+
+
+
+
+
+
+
       <article class="project-feature project-reverse reveal">
+
+
+
+
 
 
 
@@ -940,23 +1770,47 @@
 
 
 
+
+
+
+
     <div class="project-meta">
 
 
 
+
+
+
+
       <span>
+
+
 
         02 / ROBOTICS · AI · SOFTWARE
 
+
+
       </span>
+
+
+
+
 
 
 
       <span>
 
+
+
         PRODUCT
 
+
+
       </span>
+
+
+
+
 
 
 
@@ -966,9 +1820,19 @@
 
 
 
+
+
+
+
+
+
     <h3>
 
+
+
       ELIO
+
+
 
     </h3>
 
@@ -976,17 +1840,39 @@
 
 
 
+
+
+
+
+
+
     <p class="project-lead">
+
+
 
       A complete educational robotics platform combining a custom-built
 
+
+
       physical robot, embedded control, Bluetooth communication, a mobile
+
+
 
       application and AI-powered interaction. ELIO brings hardware,
 
+
+
       software and learning experiences together in one connected product.
 
+
+
     </p>
+
+
+
+
+
+
 
 
 
@@ -996,51 +1882,103 @@
 
 
 
+
+
+
+
       <span>
+
+
 
         ESP32
 
+
+
       </span>
 
 
 
+
+
+
+
       <span>
+
+
 
         C++
 
+
+
       </span>
 
 
 
+
+
+
+
       <span>
+
+
 
         BLE
 
+
+
       </span>
 
 
 
+
+
+
+
       <span>
+
+
 
         Mobile App
 
+
+
       </span>
 
 
 
+
+
+
+
       <span>
+
+
 
         AI
 
+
+
       </span>
+
+
+
+
 
 
 
       <span>
 
+
+
         CAD / 3D Printing
 
+
+
       </span>
+
+
+
+
 
 
 
@@ -1050,13 +1988,29 @@
 
 
 
+
+
+
+
+
+
     <a
+
+
 
       href="/projects/elio/"
 
+
+
       class="project-link"
 
+
+
     >
+
+
+
+
 
 
 
@@ -1064,15 +2018,31 @@
 
 
 
+
+
+
+
       <span>
 
+
+
         ↗
+
+
 
       </span>
 
 
 
+
+
+
+
     </a>
+
+
+
+
 
 
 
@@ -1082,23 +2052,49 @@
 
 
 
+
+
+
+
+
+
   <a
+
+
 
     href="/projects/elio/"
 
+
+
     class="project-showcase project-showcase-elio"
+
+
 
   >
 
 
 
+
+
+
+
     <img
+
+
 
       src="/assets/elio-real.png"
 
+
+
       alt="ELIO educational robot and companion application"
 
+
+
     >
+
+
+
+
 
 
 
@@ -1106,11 +2102,23 @@
 
 
 
+
+
+
+
       <span>
+
+
 
         ROBOT + APP + AI
 
+
+
       </span>
+
+
+
+
 
 
 
@@ -1118,11 +2126,23 @@
 
 
 
+
+
+
+
   </a>
 
 
 
+
+
+
+
 </article>
+
+
+
+
 
 
 
@@ -1134,36 +2154,79 @@
 
 
 
+
+
+
+
+
+
+
+
 <section class="capabilities">
+
+
 
   <div class="capability-heading reveal">
 
+
+
     <span class="section-label">
+
       02 / WHAT I OFFER
+
     </span>
 
+
+
     <h2>
+
       What I can build
+
       <br>
+
       <em>and bring to a team.</em>
+
     </h2>
+
+
 
     <div class="capabilities-statement">
 
+
+
       <span class="statement-line" aria-hidden="true"></span>
 
+
+
       <p>
+
         I build products end-to-end — from interface and backend logic
+
         to AI features, connected systems and real implementation.
+
       </p>
 
+
+
       <span class="statement-label">
+
         END-TO-END PRODUCT THINKING
+
       </span>
+
+
 
     </div>
 
+
+
   </div>
+
+
+
+
+
+
 
 
 
@@ -1173,59 +2236,119 @@
 
 
 
+
+
+
+
     <article class="capability-card reveal">
 
 
 
+
+
+
+
       <span class="capability-number">
+
+
 
         01
 
+
+
       </span>
 
 
 
+
+
+
+
       <h3>
+
+
 
         Full-stack product development
 
+
+
       </h3>
 
 
 
+
+
+
+
       <p>
+
+
 
         I build structured, usable and deployable digital products —
 
+
+
         not just interfaces, but full systems.
+
+
 
       </p>
 
 
 
+
+
+
+
       <ul class="capability-points">
+
+
 
         <li>User-facing interfaces and flows</li>
 
+
+
         <li>APIs, authentication and databases</li>
+
+
 
         <li>Responsive implementation and deployment</li>
 
+
+
       </ul>
 
 
 
+
+
+
+
       <div class="capability-tags">
+
+
 
         <span>Next.js</span>
 
+
+
         <span>TypeScript</span>
+
+
 
         <span>FastAPI</span>
 
+
+
         <span>SQL</span>
 
+
+
       </div>
+
+
+
+
 
 
 
@@ -1237,59 +2360,123 @@
 
 
 
+
+
+
+
+
+
+
+
     <article class="capability-card reveal">
 
 
 
+
+
+
+
       <span class="capability-number">
+
+
 
         02
 
+
+
       </span>
 
 
 
+
+
+
+
       <h3>
+
+
 
         Applied AI
 
+
+
       </h3>
 
 
 
+
+
+
+
       <p>
+
+
 
         I integrate intelligent behavior into products through reasoning,
 
+
+
         adaptive flows and AI-assisted interaction.
+
+
 
       </p>
 
 
 
+
+
+
+
       <ul class="capability-points">
+
+
 
         <li>Diagnostic reasoning and confidence logic</li>
 
+
+
         <li>Adaptive question flows</li>
+
+
 
         <li>Conversational and AI-enhanced experiences</li>
 
+
+
       </ul>
 
 
 
+
+
+
+
       <div class="capability-tags">
+
+
 
         <span>AI Features</span>
 
+
+
         <span>Logic Design</span>
+
+
 
         <span>Automation</span>
 
+
+
         <span>NLP-ready</span>
 
+
+
       </div>
+
+
+
+
 
 
 
@@ -1301,63 +2488,135 @@
 
 
 
+
+
+
+
+
+
+
+
     <article class="capability-card reveal">
 
 
 
+
+
+
+
       <span class="capability-number">
+
+
 
         03
 
+
+
       </span>
+
+
+
+
 
 
 
       <h3>
 
+
+
         Connected systems
+
+
 
       </h3>
 
 
 
+
+
+
+
       <p>
+
+
 
         I enjoy products that go beyond the screen and connect software
 
+
+
         with hardware, sensors and real-world interaction.
+
+
 
       </p>
 
 
 
+
+
+
+
       <ul class="capability-points">
+
+
 
         <li>Embedded control and communication</li>
 
+
+
         <li>Robot and device interaction</li>
 
+
+
         <li>Hardware + software integration</li>
+
+
 
       </ul>
 
 
 
+
+
+
+
       <div class="capability-tags">
+
+
 
         <span>ESP32</span>
 
+
+
         <span>C / C++</span>
+
+
 
         <span>BLE</span>
 
+
+
         <span>Sensors</span>
+
+
 
       </div>
 
 
 
+
+
+
+
     </article>
+
+
+
+
+
+
+
+
 
 
 
@@ -1369,59 +2628,233 @@
 
 
 
+
+
+
+
       <span class="capability-number">
 
+
+
         04
+
+
 
       </span>
 
 
 
+
+
+
+
       <h3>
 
+
+
         Product execution
+
+
 
       </h3>
 
 
 
+
+
+
+
       <p>
+
+
 
         I can take an idea from concept to working result,
 
+
+
         with attention to structure, clarity and presentation.
+
+
 
       </p>
 
 
 
+
+
+
+
       <ul class="capability-points">
+
+
 
         <li>From idea to prototype</li>
 
+
+
         <li>Technical implementation and iteration</li>
 
+
+
         <li>Clear presentation of the final product</li>
+
+
 
       </ul>
 
 
 
+
+
+
+
       <div class="capability-tags">
+
+
 
         <span>Problem Solving</span>
 
+
+
         <span>Prototyping</span>
+
+
 
         <span>CAD</span>
 
+
+
         <span>3D Printing</span>
+
+
 
       </div>
 
 
 
+
+
+
+
     </article>
+
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section class="about-preview reveal">
+
+
+
+  <div class="about-preview-main">
+
+
+
+    <span class="section-label">
+
+      BEHIND THE WORK
+
+    </span>
+
+
+
+    <h2>
+
+      Curious enough to ask
+
+      <br>
+
+      <em>how it works.</em>
+
+      <br>
+
+      Practical enough to build it.
+
+    </h2>
+
+
+
+    <div class="about-statement">
+
+
+
+      <span
+
+        class="about-statement-line"
+
+        aria-hidden="true"
+
+      ></span>
+
+
+
+      <p>
+
+        I'm an engineering student and software developer interested in
+
+        products where software meets intelligent and physical systems.
+
+      </p>
+
+
+
+      <span class="about-statement-label">
+
+        SOFTWARE · AI · PHYSICAL SYSTEMS
+
+      </span>
+
+
+
+    </div>
+
+
+
+    <a
+
+      href="/about/"
+
+      class="about-link"
+
+    >
+
+      More about me
+
+
+
+      <span>
+
+        ↗
+
+      </span>
+
+    </a>
 
 
 
@@ -1437,109 +2870,7 @@
 
 
 
-    <section class="about-preview reveal">
 
-
-
-      <div>
-
-
-
-        <span class="section-label">
-
-          BEHIND THE WORK
-
-        </span>
-
-
-
-
-
-        <h2>
-
-
-
-          Curious enough to ask
-
-
-
-          <br>
-
-
-
-          <em>
-
-            how it works.
-
-          </em>
-
-
-
-          <br>
-
-
-
-          Practical enough to build it.
-
-
-
-        </h2>
-
-
-
-      </div>
-
-
-
-
-
-      <div class="about-preview-copy">
-
-
-
-        <p>
-
-
-
-          I'm an engineering student and software developer
-
-          interested in products where software meets
-
-          intelligent and physical systems.
-
-
-
-        </p>
-
-
-
-
-
-        <a href="/about/">
-
-
-
-          More about me
-
-
-
-          <span>
-
-            ↗
-
-          </span>
-
-
-
-        </a>
-
-
-
-      </div>
-
-
-
-    </section>
 
 
 
@@ -1551,7 +2882,17 @@
 
 
 
+
+
+
+
       <div class="cta-glow"></div>
+
+
+
+
+
+
 
 
 
@@ -1559,9 +2900,19 @@
 
       <p>
 
+
+
         HAVE SOMETHING WORTH BUILDING?
 
+
+
       </p>
+
+
+
+
+
+
 
 
 
@@ -1571,15 +2922,31 @@
 
 
 
+
+
+
+
         Let's make it
+
+
+
+
 
 
 
         <em>
 
+
+
           real.
 
+
+
         </em>
+
+
+
+
 
 
 
@@ -1589,17 +2956,37 @@
 
 
 
+
+
+
+
+
+
       <div class="cta-actions">
+
+
+
+
 
 
 
         <a
 
+
+
           href="/contact/"
+
+
 
           class="primary-button"
 
+
+
         >
+
+
+
+
 
 
 
@@ -1607,15 +2994,33 @@
 
 
 
+
+
+
+
           <span>
 
+
+
             ↗
+
+
 
           </span>
 
 
 
+
+
+
+
         </a>
+
+
+
+
+
+
 
 
 
@@ -1623,11 +3028,21 @@
 
         <a
 
+
+
           href="/cover-letter/"
+
+
 
           class="secondary-button"
 
+
+
         >
+
+
+
+
 
 
 
@@ -1635,11 +3050,23 @@
 
 
 
+
+
+
+
           <span>
+
+
 
             ↗
 
+
+
           </span>
+
+
+
+
 
 
 
@@ -1647,11 +3074,23 @@
 
 
 
+
+
+
+
       </div>
 
 
 
+
+
+
+
     </section>
+
+
+
+
 
 
 
@@ -1663,19 +3102,41 @@
 
 
 
+
+
+
+
+
+
+
+
   <footer>
+
+
+
+
 
 
 
     <a
 
+
+
       href="/"
+
+
 
       class="logo"
 
+
+
     >
 
+
+
       AD<span>.</span>
+
+
 
     </a>
 
@@ -1683,11 +3144,27 @@
 
 
 
+
+
+
+
+
+
     <p>
+
+
 
       Ana Dumitriu · Software & Technology
 
+
+
     </p>
+
+
+
+
+
+
 
 
 
@@ -1697,31 +3174,63 @@
 
 
 
+
+
+
+
       <a
+
+
 
         href="https://github.com/DumitriuAna23"
 
+
+
         target="_blank"
+
+
 
         rel="noopener noreferrer"
 
+
+
       >
+
+
 
         GitHub ↗
 
+
+
       </a>
+
+
+
+
 
 
 
       <a href="/contact/">
 
+
+
         Contact ↗
+
+
 
       </a>
 
 
 
+
+
+
+
     </div>
+
+
+
+
 
 
 
@@ -1731,11 +3240,160 @@
 
 
 
+
+
+
+
+
+
   <script src="/home.js"></script>
+
+  <script>
+    const portfolioNav = document.querySelector(".desktop-nav");
+
+    if (portfolioNav) {
+      const navIndicator = portfolioNav.querySelector(".nav-indicator");
+      const navLinks = [...portfolioNav.querySelectorAll("a[data-nav]")];
+
+      function getCurrentNavName() {
+        const path = window.location.pathname;
+
+        if (path === "/" || path === "/index.html") {
+          return "home";
+        }
+
+        if (path.startsWith("/work/")) {
+          return "work";
+        }
+
+        if (path.startsWith("/projects/")) {
+          return "projects";
+        }
+
+        if (path.startsWith("/about/")) {
+          return "about";
+        }
+
+        if (path.startsWith("/education/")) {
+          return "education";
+        }
+
+        if (path.startsWith("/cover-letter/")) {
+          return "letter";
+        }
+
+        if (path.startsWith("/contact/")) {
+          return "contact";
+        }
+
+        return "home";
+      }
+
+      function moveNavIndicator(link, animate = true) {
+        if (!link || !navIndicator) {
+          return;
+        }
+
+        const navRect = portfolioNav.getBoundingClientRect();
+        const linkRect = link.getBoundingClientRect();
+
+        if (!animate) {
+          navIndicator.classList.add("no-transition");
+        }
+
+        navIndicator.style.width = `${linkRect.width}px`;
+        navIndicator.style.transform =
+          `translateX(${linkRect.left - navRect.left}px)`;
+
+        if (!animate) {
+          requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+              navIndicator.classList.remove("no-transition");
+            });
+          });
+        }
+      }
+
+      const activeName = getCurrentNavName();
+
+      const activeLink = navLinks.find(
+        (link) => link.dataset.nav === activeName
+      );
+
+      navLinks.forEach((link) => {
+        link.classList.toggle(
+          "is-active",
+          link === activeLink
+        );
+      });
+
+      requestAnimationFrame(() => {
+        moveNavIndicator(activeLink, false);
+      });
+
+      navLinks.forEach((link) => {
+        link.addEventListener("mouseenter", () => {
+          moveNavIndicator(link);
+        });
+
+        link.addEventListener("mouseleave", () => {
+          moveNavIndicator(activeLink);
+        });
+
+        link.addEventListener("click", (event) => {
+          if (
+            event.button !== 0 ||
+            event.metaKey ||
+            event.ctrlKey ||
+            event.shiftKey ||
+            event.altKey
+          ) {
+            return;
+          }
+
+          const destination = link.getAttribute("href");
+
+          if (
+            !destination ||
+            destination.startsWith("#") ||
+            destination === window.location.pathname
+          ) {
+            return;
+          }
+
+          event.preventDefault();
+
+          navLinks.forEach((item) => {
+            item.classList.remove("is-active");
+          });
+
+          link.classList.add("is-active");
+          moveNavIndicator(link);
+
+          window.setTimeout(() => {
+            window.location.href = destination;
+          }, 240);
+        });
+      });
+
+      window.addEventListener("resize", () => {
+        moveNavIndicator(activeLink, false);
+      });
+    }
+  </script>
+
+
+
+
+
 
 
 
 </body>
+
+
+
+
 
 
 
